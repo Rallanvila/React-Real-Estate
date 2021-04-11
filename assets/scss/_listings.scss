@@ -1,0 +1,72 @@
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+@mixin flexContainer($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+@mixin flexCenter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin paddingLR($padding-left, $padding-right){
+	  padding-left: $padding-left + px;
+	  padding-right: $padding-right + px;
+}
+@mixin projectShadow{
+	-webkit-box-shadow: -6px 6px 8px 0px rgba(0,0,0,0.72); 
+	box-shadow: -6px 6px 8px 0px rgba(0,0,0,0.72);
+}
+@mixin button{
+	button{
+		font-size: 1rem;
+		padding: 1rem 1.4rem;
+		border-radius: $global-btn-border-radius;
+		border: none;
+		background: $color-bg;
+		transition: all .1s ease-in-out;
+		&:hover{
+			font-size: 1.2rem;
+			background-color: darken($color-bg, 5%)
+		}
+		a{
+			color: black;
+			text-decoration: none;
+			opacity: .8;
+			transition: all .2s ease-in-out;
+		}
+	}
+}
+
+header{
+    background: #0c002b;
+    color: #ffffff;
+    height: 100px;
+	width: 100%;
+	@include flexContainer(row, space-between, center);
+	padding: 0 70px;
+    nav{
+        a{
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0 20px;
+            &:hover{
+                color: #ff71be;
+            }
+        }
+        .register-btn{
+            background: $pink;
+            background-color: #ff71be;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+    }
+}
