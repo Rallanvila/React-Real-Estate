@@ -3,6 +3,7 @@
 @import 'variables';
 @import "reset";
 @import "listings";
+@import "content-area";
 // Variables=========================================
 $color-font: #1C1C1C;
 $color-bg: #F0F0F0;
@@ -70,37 +71,38 @@ $global-btn-border-radius: 25px;
 }
 
 // Universal Setting============
-* {
+*, html, body {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Roboto';
 }
 //Typography====================
-html, body {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5, li {
-		font-family: "Poppins", sans-serif;
-		opacity: 0.9;
-		line-height: 1.4;
-	}
-	p {
-		font-family: "Zilla Slab", serif;
-		line-height: 1.4;
-	}
-	h1{
-		font-size: 3rem;
-	}
-	h2{
-		font-size: 2rem;
-		padding-bottom: 40px;
-	}
-	h3{
-		font-size: 1.5rem;
-		padding-bottom: 30px;
-	}
-}
+// html, body {
+// 	h1,
+// 	h2,
+// 	h3,
+// 	h4,
+// 	h5, li {
+// 		font-family: "Poppins", sans-serif;
+// 		opacity: 0.9;
+// 		line-height: 1.4;
+// 	}
+// 	p {
+// 		font-family: "Zilla Slab", serif;
+// 		line-height: 1.4;
+// 	}
+// 	h1{
+// 		font-size: 3rem;
+// 	}
+// 	h2{
+// 		font-size: 2rem;
+// 		padding-bottom: 40px;
+// 	}
+// 	h3{
+// 		font-size: 1.5rem;
+// 		padding-bottom: 30px;
+// 	}
+// }
 
 

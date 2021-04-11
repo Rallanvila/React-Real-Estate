@@ -47,10 +47,9 @@
 header{
     background: #0c002b;
     color: #ffffff;
-    height: 100px;
 	width: 100%;
 	@include flexContainer(row, space-between, center);
-	padding: 0 70px;
+	padding: 20px 70px;
     nav{
         a{
             color: #ffffff;
