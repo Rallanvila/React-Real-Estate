@@ -142,6 +142,33 @@
             left: 0;
             width: 100%;
             height: 100%;
+            .user-img{
+                display: inline-block;
+                img{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    border: 3px solid white;
+                    margin: 10px;
+                }
+            }
+            .user-details{
+                display: inline-block;
+                vertical-align: top;
+                padding: 15px 0;
+                .user-name{
+                    margin-bottom: 10px;
+                }
+            }
+            .listing-details{
+                width: 200px;
+                margin: 0 auto;
+                position: relative;
+                padding-top: 5px;
+                .fas, .fa{
+                    margin: 0 20px 10px;
+                }
+            }
         }
     }
 }

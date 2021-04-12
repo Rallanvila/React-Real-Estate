@@ -35,9 +35,15 @@ export default class Listings extends Component {
 						<div className="listing-img">
 							<span className="address">Address</span>
 							<div className="details">
-								<div className="user-img"></div>
+								<div className="user-img">
+									<img
+										src="https://randomuser.me/api/portraits/women/46.jpg"
+										alt="realtor"
+									/>
+								</div>
 								<div className="user-details">
 									<span className="user-name">Kimberly Nguyen</span>
+									<br />
 									<span className="post-date">05/24/2021</span>
 								</div>
 								<div className="listing-details">
