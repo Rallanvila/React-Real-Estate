@@ -1,8 +1,16 @@
+#content-area{
+    width: 100%;
+    overflow: auto;
+    background: black;
+    min-height: 100vh;
+}
 #filter {
     background: $grey;
     width: 30%;
     max-width: 300px;
     padding-top: 30px;
+    display: inline-block;
+    float: left;
     h4{
         margin-bottom: 25px;
         text-transform: uppercase;
@@ -48,6 +56,92 @@
                     }
                 }
             }
+        }
+    }
+}
+#listings{
+    display: inline-block;
+    width: 70%;
+    float: right;
+    padding: 15px;
+    background: $offwhite;
+    overflow: auto;
+    .search-area{
+        input[type='text']{
+            width: 70%;
+            background: transparent;
+            font-size: 2rem;
+            border: none;
+            border-bottom: 2px solid $darkgrey;
+            margin-bottom: 20px;
+            color: lightgrey;
+        }
+    }
+    .sortby-area{
+        margin-bottom: 20px;
+        .results{
+            font-size: .8rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .sort-options{
+            float: right;
+            vertical-align: center;
+
+            select{
+                font-size: .9rem;
+                font-weight: 300;
+                border: 1px solid lightgrey;
+                display: inline-block;
+                margin-right: 15px;
+                padding: 5px 10px;
+                vertical-align: center;
+            }
+            .view{
+                display: inline-block;
+                .fas{
+                    display: inline-block;
+                    margin-right: 15px;
+                    font-size: 1.2rem;
+                }
+
+            }
+        }
+    }
+    .listings-results{
+        margin-bottom: 60px;
+        .listing{
+            background: #ffffff;
+            width: 33.33%;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+            -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+            box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+        }
+        .listing-img{
+            color: white;
+            padding: 15px;
+            position: relative;
+            background: url(https://i1.wp.com/www.thededicatedhouse.com/wp-content/uploads/2019/07/Heres-How-to-Create-a-Modern-House-Design-for-Your-New-Home.jpg?fit=2000%2C1500&ssl=1) no-repeat center center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 150px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }.details{
+            background: rgb(143,29,203);
+            background: linear-gradient(225deg, rgba(143,29,203,.8) 0%, rgba(162,132,240,.8) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 }

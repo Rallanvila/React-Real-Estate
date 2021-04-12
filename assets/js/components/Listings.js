@@ -11,13 +11,13 @@ export default class Listings extends Component {
 	async test() {}
 	render() {
 		return (
-			<section className="listings">
+			<section id="listings">
 				<section className="search-area">
 					<input type="text" name="search" />
 				</section>
 
 				<section className="sortby-area">
-					<div>390 results found</div>
+					<div className="results">390 results found</div>
 					<div className="sort-options">
 						<select name="sortby" className="sortby" id="">
 							<option value="price-asc">Highest Price</option>
