@@ -73,10 +73,10 @@ export default class Listings extends Component {
 					<ul className="pages">
 						<li>Prev</li>
 						<li className="active">1</li>
-						<li className="active">2</li>
-						<li className="active">3</li>
-						<li className="active">4</li>
-						<li className="active">5</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
 						<li>Next</li>
 					</ul>
 				</section>

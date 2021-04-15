@@ -1,7 +1,6 @@
 #content-area{
     width: 100%;
     overflow: auto;
-    background: black;
     min-height: 100vh;
 }
 #filter {
@@ -62,7 +61,7 @@
 #listings{
     display: inline-block;
     width: 70%;
-    float: right;
+    float: left;
     padding: 15px;
     background: $offwhite;
     overflow: auto;
@@ -232,6 +231,7 @@
             display: inline-block;
             padding: 15px;
             cursor: pointer;
+            
             &.active{
                 background: lightgrey;
             }
