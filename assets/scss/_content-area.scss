@@ -117,58 +117,108 @@
             -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
             -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
             box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
-        }
-        .listing-img{
-            color: white;
-            padding: 15px;
-            position: relative;
-            background: url(https://i1.wp.com/www.thededicatedhouse.com/wp-content/uploads/2019/07/Heres-How-to-Create-a-Modern-House-Design-for-Your-New-Home.jpg?fit=2000%2C1500&ssl=1) no-repeat center center; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            min-height: 150px;
-            -webkit-border-top-left-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
-            -moz-border-radius-topleft: 5px;
-            -moz-border-radius-topright: 5px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }.details{
-            background: rgb(143,29,203);
-            background: linear-gradient(225deg, rgba(143,29,203,.8) 0%, rgba(162,132,240,.8) 100%);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            .user-img{
-                display: inline-block;
-                img{
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 50%;
-                    border: 3px solid white;
-                    margin: 10px;
-                }
-            }
-            .user-details{
-                display: inline-block;
-                vertical-align: top;
-                padding: 15px 0;
-                .user-name{
-                    margin-bottom: 10px;
-                }
-            }
-            .listing-details{
-                width: 200px;
-                margin: 0 auto;
+            .listing-img{
+                color: white;
+                padding: 15px;
                 position: relative;
-                padding-top: 5px;
-                .fas, .fa{
-                    margin: 0 20px 10px;
+                background: url(https://i1.wp.com/www.thededicatedhouse.com/wp-content/uploads/2019/07/Heres-How-to-Create-a-Modern-House-Design-for-Your-New-Home.jpg?fit=2000%2C1500&ssl=1) no-repeat center center; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                min-height: 175px;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                .dark-overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,.4)    
+                }
+                .address{
+                    position: absolute;
+                    bottom: 10px;
+                    font-size: 1.3rem;
+                }
+                &:hover {
+                    .details{
+                        opacity: 1;
+                        transition: all .8s ease-in-out;
+                    }
+                    .address{
+                        opacity: 0;
+                        transition: all .8s ease-in-out;
+                    }
+                }
+            }
+            .details{
+                opacity: 0;
+                background: rgb(143,29,203);
+                background: linear-gradient(225deg, rgba(143,29,203,.8) 0%, rgba(162,132,240,.8) 100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                .user-img{
+                    display: inline-block;
+                    img{
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        border: 3px solid white;
+                        margin: 10px;
+                    }
+                }
+                .user-details{
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 18px 18px 15px;
+                    .user-name{
+                        display: block;
+                    }
+                    .post-date{
+                        color: rgba(224, 224, 224, .8);
+                    }
+                }
+                .listing-details{
+                    width: 200px;
+                    margin: 0 auto;
+                    position: relative;
+                    padding-top: 5px;
+                    .fas, .fa{
+                        margin: 0 20px 10px;
+                    }
                 }
             }
         }
+        .bottom-info{
+            display: block;
+            padding: 20px;
+            color: lightgrey;
+        }
+        }
+}
+
+.view-btn {
+    right: 15px;
+    background: #000000;
+    color:#ffffff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 15px;
+    font-size: .9rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    &:hover{
+        background: $pink;
+        cursor: pointer;
     }
 }
