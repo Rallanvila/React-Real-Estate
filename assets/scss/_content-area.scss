@@ -66,14 +66,15 @@
     background: $offwhite;
     overflow: auto;
     .search-area{
-        input[type='text']{
+        input[type="text"]{
             width: 70%;
             background: transparent;
             font-size: 2rem;
             border: none;
-            border-bottom: 2px solid $darkgrey;
+            border-bottom: 1px solid $darkgrey;
             margin-bottom: 20px;
-            color: lightgrey;
+            color: $darkgrey;
+            font-weight: 300;
         }
     }
     .sortby-area{
@@ -82,11 +83,11 @@
             font-size: .8rem;
             margin-bottom: 20px;
             display: inline-block;
+            color: $darkgrey;
         }
         .sort-options{
             float: right;
             vertical-align: center;
-
             select{
                 font-size: .9rem;
                 font-weight: 300;
@@ -107,134 +108,159 @@
             }
         }
     }
+    .col-md-9{
+        width: 75%
+        
+    }
     .listings-results{
+        width: 100%;
         margin-bottom: 60px;
-        .listing{
-            background: #ffffff;
-            width: 33.33%;
-            border-radius: 5px;
-            -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
-            -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
-            box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
-            .listing-img{
-                color: white;
-                padding: 15px;
-                position: relative;
-                background: url(https://i1.wp.com/www.thededicatedhouse.com/wp-content/uploads/2019/07/Heres-How-to-Create-a-Modern-House-Design-for-Your-New-Home.jpg?fit=2000%2C1500&ssl=1) no-repeat center center; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                min-height: 175px;
-                -webkit-border-top-left-radius: 5px;
-                -webkit-border-top-right-radius: 5px;
-                -moz-border-radius-topleft: 5px;
-                -moz-border-radius-topright: 5px;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-                .dark-overlay{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0,0,0,.4)    
-                }
-                .address{
-                    position: absolute;
-                    bottom: 10px;
-                    font-size: 1.3rem;
-                }
-                &:hover {
-                    .details{
-                        opacity: 1;
-                        transition: all .8s ease-in-out;
+        display: inline-block;
+        flex-wrap: wrap;
+        .col-md-3{
+            width: 25%;
+            min-width: 260px;
+            max-width: 360px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 15px;
+            .listing{
+                width: 100%;
+                display: inline-block;
+                background: #ffffff;
+                border-radius: 5px;
+                -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+                -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+                box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+                .listing-img{
+                    color: white;
+                    padding: 15px;
+                    position: relative;
+                    background: url(https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                    min-height: 175px;
+                    -webkit-border-top-left-radius: 5px;
+                    -webkit-border-top-right-radius: 5px;
+                    -moz-border-radius-topleft: 5px;
+                    -moz-border-radius-topright: 5px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    .dark-overlay{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,.4)    
                     }
                     .address{
+                        position: absolute;
+                        bottom: 10px;
+                        font-size: 1.3rem;
+                    }
+                    &:hover {
+                        .details{
+                            opacity: 1;
+                            transition: all .8s ease-in-out;
+                        }
+                        .address{
+                            opacity: 0;
+                            transition: all .8s ease-in-out;
+                        }
+                    }
+                    .details{
                         opacity: 0;
-                        transition: all .8s ease-in-out;
+                        background: rgb(143,29,203);
+                        background: linear-gradient(225deg, rgba(143,29,203,.8) 0%, rgba(162,132,240,.8) 100%);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        .user-img{
+                            display: inline-block;
+                            img{
+                                height: 50px;
+                                width: 50px;
+                                border-radius: 50%;
+                                border: 3px solid white;
+                                margin: 10px;
+                            }
+                        }
+                        .user-details{
+                            display: inline-block;
+                            vertical-align: top;
+                            padding: 18px 18px 15px;
+                            .user-name{
+                                display: block;
+                            }
+                            .post-date{
+                                color: rgba(224, 224, 224, .8);
+                            }
+                        }
+                        .listing-details{
+                            width: 200px;
+                            margin: 0 auto;
+                            position: relative;
+                            padding-top: 5px;
+                            .fas, .fa{
+                                margin: 0 20px 10px;
+                            }
+                            .view-btn {
+                                right: 15px;
+                                background: #000000;
+                                color:#ffffff;
+                                border: none;
+                                padding: 5px 10px;
+                                margin-left: 15px;
+                                font-size: .9rem;
+                                border-radius: 5px;
+                                text-align: center;
+                                transition: all .2s ease-in-out;
+                                &:hover{
+                                    background: $pink;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
                     }
                 }
-            }
-            .details{
-                opacity: 0;
-                background: rgb(143,29,203);
-                background: linear-gradient(225deg, rgba(143,29,203,.8) 0%, rgba(162,132,240,.8) 100%);
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                .user-img{
-                    display: inline-block;
-                    img{
-                        height: 50px;
-                        width: 50px;
-                        border-radius: 50%;
-                        border: 3px solid white;
-                        margin: 10px;
-                    }
-                }
-                .user-details{
-                    display: inline-block;
-                    vertical-align: top;
-                    padding: 18px 18px 15px;
-                    .user-name{
+                .bottom-info{
+                    display: block;
+                    padding: 20px 15px;
+                    .price{
+                        color: $darkgrey;
                         display: block;
+                        margin-bottom: 10px;
                     }
-                    .post-date{
-                        color: rgba(224, 224, 224, .8);
-                    }
-                }
-                .listing-details{
-                    width: 200px;
-                    margin: 0 auto;
-                    position: relative;
-                    padding-top: 5px;
-                    .fas, .fa{
-                        margin: 0 20px 10px;
+                    .location{
+                        color: $lightgrey;
+                        display: block;
+                        font-size: 1.2rem;
                     }
                 }
             }
         }
-        .bottom-info{
-            display: block;
-            padding: 20px;
-            color: lightgrey;
-        }
-        }
+    }
 }
 
-.view-btn {
-    right: 15px;
-    background: #000000;
-    color:#ffffff;
-    border: none;
-    padding: 5px 10px;
-    margin-left: 15px;
-    font-size: .9rem;
-    border-radius: 5px;
-    text-align: center;
-    transition: all .2s ease-in-out;
-    &:hover{
-        background: $pink;
-        cursor: pointer;
-    }
-}
 #pagination{ 
-  text-align: center;
-    .pages{
-        li{
-            -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
-                    -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
-                    box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
-            display: inline-block;
-            padding: 15px;
-            cursor: pointer;
-            
-            &.active{
-                background: lightgrey;
+    text-align: center;
+        .pages{
+            li{
+                -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+                        -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+                        box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+                display: inline-block;
+                padding: 15px;
+                cursor: pointer;
+                
+                &.active{
+                    background: lightgrey;
+                }
             }
         }
-    }
 }

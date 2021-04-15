@@ -36,6 +36,18 @@ var listingsData = [
 			'https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
 	},
 	{
+		address: '2101 Fruitvilla Rd',
+		city: 'Sarasota',
+		state: 'Fl',
+		rooms: '5',
+		price: '700000',
+		floorSpace: '2000',
+		extras: ['gym', 'pool'],
+		homeType: 'Apartment',
+		image:
+			'https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+	},
+	{
 		address: '1920 Paramount Dr',
 		city: 'Sarasota',
 		state: 'Fl',

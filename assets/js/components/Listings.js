@@ -6,31 +6,14 @@ export default class Listings extends Component {
 		this.state = {
 			name: 'Joe'
 		};
+		this.loopListings = this.loopListings.bind(this);
 	}
-	clickedBtn = () => {};
-	async test() {}
-	render() {
-		return (
-			<section id="listings">
-				<section className="search-area">
-					<input type="text" name="search" />
-				</section>
+	loopListings() {
+		var { listingsData } = this.props;
 
-				<section className="sortby-area">
-					<div className="results">390 results found</div>
-					<div className="sort-options">
-						<select name="sortby" className="sortby" id="">
-							<option value="price-asc">Highest Price</option>
-							<option value="price-asc">Lowest Price</option>
-						</select>
-						<div className="view">
-							<i className="fas fa-list"></i>
-							<i className="fas fa-th"></i>
-						</div>
-					</div>
-				</section>
-
-				<section className="listings-results">
+		return listingsData.map(listing => {
+			return (
+				<div className="col-md-3">
 					<div className="listing">
 						<div className="listing-img">
 							<div className="dark-overlay"></div>
@@ -61,14 +44,41 @@ export default class Listings extends Component {
 							</div>
 						</div>
 						<div className="bottom-info">
-							<span>$1,000/mo</span>
-							<span>
+							<span className="price">$1,000/mo</span>
+							<span className="location">
 								<i className="fas fa-map-marker-alt" aria-hidden="true"></i>
 								Sarasota, FL
 							</span>
 						</div>
 					</div>
+				</div>
+			);
+		});
+	}
+	clickedBtn = () => {};
+	async test() {}
+	render() {
+		return (
+			<section id="listings">
+				<section className="search-area">
+					<input type="text" name="search" />
 				</section>
+
+				<section className="sortby-area">
+					<div className="results">390 results found</div>
+					<div className="sort-options">
+						<select name="sortby" className="sortby" id="">
+							<option value="price-asc">Highest Price</option>
+							<option value="price-asc">Lowest Price</option>
+						</select>
+						<div className="view">
+							<i className="fas fa-list"></i>
+							<i className="fas fa-th"></i>
+						</div>
+					</div>
+				</section>
+
+				<section className="listings-results">{this.loopListings()}</section>
 				<section id="pagination">
 					<ul className="pages">
 						<li>Prev</li>
