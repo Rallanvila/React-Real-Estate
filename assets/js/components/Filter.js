@@ -51,34 +51,34 @@ export default class Filter extends Component {
 						<span className="title">Price</span>
 						<input
 							type="text"
-							name="min-price"
+							name="min_price"
 							className="min-price"
 							onChange={this.props.change}
-							value="0"
+							value={this.props.globalState.min_price}
 						/>
 						<input
 							type="text"
-							name="max-price"
+							name="max_price"
 							className="max-price"
 							onChange={this.props.change}
-							value="1000000"
+							value={this.props.globalState.max_price}
 						/>
 					</div>
 					<div className="filters floor-space">
 						<span className="title">Floor Space</span>
 						<input
 							type="text"
-							name="min-floor-space"
+							name="min_floor_space"
 							className="min-floor-space"
 							onChange={this.props.change}
-							value="0"
+							value={this.props.globalState.min_floor_space}
 						/>
 						<input
 							type="text"
-							name="max-floor-space"
+							name="max_floor_space"
 							className="min-floor-space"
 							onChange={this.props.change}
-							value="10000"
+							value={this.props.globalState.max_floor_space}
 						/>
 					</div>
 					<div className="filters extras">
@@ -86,7 +86,7 @@ export default class Filter extends Component {
 						<label htmlFor="extras">
 							<span>Elevators</span>
 							<input
-								name="extras"
+								name="elevator"
 								value="elevator"
 								type="checkbox"
 								onChange={this.props.change}
@@ -97,8 +97,8 @@ export default class Filter extends Component {
 						<label htmlFor="extras">
 							<span>Swimming Pool</span>
 							<input
-								name="extras"
-								value="swimming-pool"
+								name="swimming_pool"
+								value="swimming_pool"
 								type="checkbox"
 								onChange={this.props.change}
 							/>
@@ -108,8 +108,8 @@ export default class Filter extends Component {
 						<label htmlFor="extras">
 							<span>Finished Basement</span>
 							<input
-								name="extras"
-								value="finished-basement"
+								name="finished_basement"
+								value="finished_basement"
 								type="checkbox"
 								onChange={this.props.change}
 							/>
@@ -119,7 +119,7 @@ export default class Filter extends Component {
 						<label htmlFor="extras">
 							<span>Gym</span>
 							<input
-								name="extras"
+								name="gym"
 								value="gym"
 								type="checkbox"
 								onChange={this.props.change}
