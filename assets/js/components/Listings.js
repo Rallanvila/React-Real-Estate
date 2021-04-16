@@ -11,13 +11,18 @@ export default class Listings extends Component {
 	loopListings() {
 		var { listingsData } = this.props;
 
-		return listingsData.map(listing => {
+		return listingsData.map((listing, index) => {
 			return (
-				<div className="col-md-3">
+				<div className="col-md-3" key={index}>
 					<div className="listing">
-						<div className="listing-img">
+						<div
+							className="listing-img"
+							style={{
+								background: `url("${listing.image}") no-repeat center center`
+							}}
+						>
 							<div className="dark-overlay"></div>
-							<span className="address">3606 82nd Pl E</span>
+							<span className="address">{listing.address}</span>
 							<div className="details">
 								<div className="user-img">
 									<img
@@ -33,21 +38,21 @@ export default class Listings extends Component {
 								<div className="listing-details">
 									<div className="floor-space">
 										<i className="fa fa-square-o" aria-hidden="true"></i>
-										<span>1000 ft&sup2;</span>
+										<span>{listing.floorSpace} ft&sup2;</span>
 									</div>
 									<div className="bedroom">
-										<i class="fas fa-bed" aria-hidden="true"></i>
-										<span>3 bedrooms</span>
+										<i className="fas fa-bed" aria-hidden="true"></i>
+										<span>{listing.bedrooms} bedrooms</span>
 									</div>
 									<button className="view-btn">View Listing</button>
 								</div>
 							</div>
 						</div>
 						<div className="bottom-info">
-							<span className="price">$1,000/mo</span>
+							<span className="price">${listing.price}</span>
 							<span className="location">
 								<i className="fas fa-map-marker-alt" aria-hidden="true"></i>
-								Sarasota, FL
+								{listing.city}, {listing.state}
 							</span>
 						</div>
 					</div>
@@ -79,6 +84,7 @@ export default class Listings extends Component {
 				</section>
 
 				<section className="listings-results">{this.loopListings()}</section>
+
 				<section id="pagination">
 					<ul className="pages">
 						<li>Prev</li>
