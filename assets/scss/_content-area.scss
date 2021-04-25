@@ -111,23 +111,19 @@
             }
         }
     }
-    .col-md-9{
-        width: 75%
-
-    }
     .listings-results{
         width: 100%;
         margin-bottom: 60px;
         display: inline-block;
         flex-wrap: wrap;
-        .col-md-3{
-            width: 25%;
-            min-width: 260px;
-            max-width: 360px;
-            margin-bottom: 30px;
-            display: inline-block;
-            vertical-align: top;
-            padding: 0 15px;
+        // .col-md-3{
+        //     width: 25%;
+        //     min-width: 260px;
+        //     max-width: 360px;
+        //     margin-bottom: 30px;
+        //     display: inline-block;
+        //     vertical-align: top;
+        //     padding: 0 15px;
             .listing{
                 width: 100%;
                 display: inline-block;
@@ -247,7 +243,7 @@
                     }
                 }
             }
-        }
+        // }
     }
 }
 
@@ -268,3 +264,5 @@
             }
         }
 }
+
+
