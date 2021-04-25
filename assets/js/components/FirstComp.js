@@ -23,11 +23,20 @@ class App extends Component {
 			gym: false,
 			swimming_pool: false,
 			filteredData: listingsData,
-			populateFormsData: ''
+			populateFormsData: '',
+			sortby: 'price-dsc'
 		};
 		this.change = this.change.bind(this);
 		this.filteredData = this.filteredData.bind(this);
 		this.populateForms = this.populateForms.bind(this);
+	}
+	componentWillMount() {
+		let listingsData = this.state.listingsData.sort((a, b) => {
+			return a.price - b.price;
+		});
+		this.setState({
+			listingsData
+		});
 	}
 	change(event) {
 		var name = event.target.name;
@@ -65,6 +74,16 @@ class App extends Component {
 				return item.homeType == this.state.homeType;
 			});
 		}
+		if (this.state.sortby == 'price-dsc') {
+			newData = newData.sort((a, b) => {
+				return a.price - b.price;
+			});
+		}
+		if (this.state.sortby == 'price-asc') {
+			newData = newData.sort((a, b) => {
+				return b.price - a.price;
+			});
+		}
 		this.setState({
 			filteredData: newData
 		});
@@ -76,18 +95,21 @@ class App extends Component {
 		});
 		cities = new Set(cities);
 		cities = [...cities];
+		cities = cities.sort();
 		//homeType
 		let homeTypes = this.state.listingsData.map(item => {
 			return item.homeType;
 		});
 		homeTypes = new Set(homeTypes);
 		homeTypes = [...homeTypes];
+		homeTypes = homeTypes.sort();
 		//bedrooms
 		let bedrooms = this.state.listingsData.map(item => {
 			return item.bedrooms;
 		});
 		bedrooms = new Set(bedrooms);
 		bedrooms = [...bedrooms];
+		bedrooms = bedrooms.sort();
 
 		this.setState(
 			{
@@ -113,7 +135,10 @@ class App extends Component {
 						globalState={this.state}
 						populateAction={this.populateForms}
 					/>
-					<Listings listingsData={this.state.filteredData} />
+					<Listings
+						listingsData={this.state.filteredData}
+						change={this.change}
+					/>
 				</section>
 			</div>
 		);

@@ -82,8 +82,6 @@ export default class Filter extends Component {
 						className="filters bedrooms"
 						onChange={this.props.change}
 					>
-						<option value="All">No Limit</option>
-
 						{this.bedrooms()}
 					</select>
 
