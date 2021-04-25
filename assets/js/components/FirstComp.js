@@ -9,8 +9,11 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			name: 'Joe',
+			name: 'Allan',
 			listingsData,
+			city: 'All',
+			homeType: 'All',
+			bedrooms: '0',
 			min_price: 0,
 			max_price: 1000000,
 			min_floor_space: 0,
@@ -46,9 +49,20 @@ class App extends Component {
 				item.price >= this.state.min_price &&
 				item.price <= this.state.max_price &&
 				item.floorSpace >= this.state.min_floor_space &&
-				item.floorSpace <= this.state.max_floor_space
+				item.floorSpace <= this.state.max_floor_space &&
+				item.bedrooms >= this.state.bedrooms
 			);
 		});
+		if (this.state.city != 'All') {
+			newData = newData.filter(item => {
+				return item.city == this.state.city;
+			});
+		}
+		if (this.state.homeType != 'All') {
+			newData = newData.filter(item => {
+				return item.homeType == this.state.homeType;
+			});
+		}
 		this.setState({
 			filteredData: newData
 		});
