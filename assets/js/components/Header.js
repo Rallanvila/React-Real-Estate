@@ -5,7 +5,7 @@ export default class Header extends Component {
 	constructor() {
 		super();
 		this.state = {
-			name: 'Joe'
+			name: 'Allan'
 		};
 	}
 	clickedBtn = () => {};
@@ -13,7 +13,7 @@ export default class Header extends Component {
 	render() {
 		return (
 			<header>
-				<div>Logo</div>
+				<div>Vila Real Estate</div>
 				<nav>
 					<a href="#">Create Ads</a>
 					<a href="#">About Us</a>

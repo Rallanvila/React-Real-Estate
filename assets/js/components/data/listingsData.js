@@ -33,7 +33,7 @@ var listingsData = [
 		extras: ['elevator', 'gym', 'pool'],
 		homeType: 'Studio',
 		image:
-			'https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+			'https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 	},
 	{
 		address: '2101 Main St',
@@ -45,7 +45,7 @@ var listingsData = [
 		extras: ['gym', 'pool'],
 		homeType: 'Apartment',
 		image:
-			'https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+			'https://images.pexels.com/photos/209315/pexels-photo-209315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 	},
 	{
 		address: '2101 Fruitville Rd',
@@ -57,7 +57,7 @@ var listingsData = [
 		extras: ['gym', 'pool'],
 		homeType: 'Room',
 		image:
-			'https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+			'https://images.pexels.com/photos/221024/pexels-photo-221024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 	},
 	{
 		address: '1920 Paramount Dr',
